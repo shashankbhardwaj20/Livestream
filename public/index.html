@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiveStream</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-video"></i> MultiStream</h1>
+    </header>
+    <div class="container">
+        <div class="control-panel">
+            <div>
+                <button id="startStream" class="btn"><i class="fas fa-play"></i> Start Streaming</button>
+                <button id="stopStream" class="btn" disabled><i class="fas fa-stop"></i> Stop Streaming</button>
+            </div>
+            <div id="streamStatus"></div>
+        </div>
+        
+        <div id="myStreamContainer" style="display: none;">
+            <h2>My Stream</h2>
+            <div id="myVideoContainer"></div>
+        </div>
+
+        <div class="stream-list">
+            <h2><i class="fas fa-list"></i> Available Streams</h2>
+            <ul id="streamList"></ul>
+        </div>
+        
+        <div id="videoContainer"></div>
+        
+        <div class="chat-container">
+            <h2><i class="fas fa-comments"></i> Live Chat</h2>
+            <div id="chatMessages"></div>
+            <form id="chatForm">
+                <input type="text" id="chatInput" placeholder="Type your message..." required>
+                <button type="submit" id="chatSubmit"><i class="fas fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="index.js">
+
+    </script>
+</body>
+</html>
